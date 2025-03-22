@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: #0077cc;
+    color: white;
+    padding: 20px;
+  }
+  
+  .contenedor_registro, .contenedor_busqueda {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background: #005fa3;
+    color: white;
+  }
+  
+  #contenedor-resultado {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para los resultados de la búsqueda */
+  .resultado {
+    background: white;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .resultado h3 {
+    font-size: 18px;
+    color: #0077cc;
+    margin-bottom: 10px;
+  }
+  
+  .resultado p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .resultado p strong {
+    color: #333;
+  }
+  
+  /* Estilos para el carrito */
+  .carrito {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .carrito a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+  }
+  
+  .carrito a:hover {
+    color: #005fa3;
+  }
