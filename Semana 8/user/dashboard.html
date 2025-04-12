@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Dashboard</title>
+  <link rel="stylesheet" href="../css/stylesuser.css">
+</head>
+<body>
+  <h1>✈️🌴 Travel Dashboard</h1>
+  
+  <div class="user-controls">
+    <button id="btnCerrarSesion" class="btn-logout">Cerrar Sesión</button>
+</div>
+
+  <div class="search-controls">
+    <select id="tipoBusqueda">
+      <option value="todos">Todos los resultados</option>
+      <option value="vuelos">Solo vuelos</option>
+      <option value="hoteles">Solo hoteles</option>
+    </select>
+    <button id="btnBuscar">Buscar</button>
+  </div>
+
+  <div id="resultados">
+    <!-- Los resultados aparecerán aquí -->
+  </div>
+
+  <div id="carrito">
+    <h2>🛒 Tu carrito</h2>
+    <ul id="listaCarrito"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button id="btnPagar">Realizar Pago</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
