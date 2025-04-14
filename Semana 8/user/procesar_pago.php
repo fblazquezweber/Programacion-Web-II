@@ -65,7 +65,20 @@ try {
         // Insertar reserva (usando el nombre correcto de la tabla: reserva)
         $stmt = $pdo->prepare("INSERT INTO reserva (id_cliente, id_vuelo, id_hotel) VALUES (:id_cliente, :id_vuelo, :id_hotel)");
         $stmt->bindParam(':id_cliente', $id_cliente, PDO::PARAM_INT);
-        
+
+        $query = "SELECT habitaciones_disponibles FROM hotel WHERE id_hotel = $id_hotel";
+        $result = $pdo->query($query);
+        $disponibilidad = $result->fetch();
+        if ($disponibilidad['habitaciones_disponibles'] > 0) {
+
+            $update = $pdo->prepare("UPDATE hotel SET habitaciones_disponibles = habitaciones_disponibles - 1 WHERE id_hotel = :id_hotel");
+            $update->bindParam(':id_hotel', $id_hotel, PDO::PARAM_INT);
+            $update->execute();
+
+        }   else {
+            throw new Exception('Error al crear reserva: no hay habitaciones disponibles');
+        }        
+
         // Manejo explícito de NULL
         if ($id_vuelo !== null) {
             $stmt->bindParam(':id_vuelo', $id_vuelo, PDO::PARAM_INT);
